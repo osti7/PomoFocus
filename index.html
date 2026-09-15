@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoFocus | Pomodoro Timer</title>
+    <link rel="icon" href="logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="frame">
+        <h1 id="timer">25.00</h1>
+
+        <div id="buttons">
+            <button onclick="startStop()" id="startButton">
+                Start
+            </button>
+
+            <div id="info">
+                <p id="mode">FOCUS</p>
+                <br>
+                <p id="osti">by O S T I</p>
+            </div>
+            
+            <button onclick="reset()" id="resetButton">
+                Reset
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
