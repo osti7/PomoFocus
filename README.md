@@ -1,6 +1,10 @@
 # PomoFocus | Pomodoro Timer
 Minimalist and modern pomodoro timer. 
 
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/f88f6b45-43c5-460a-b2ab-4b4dba149387" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/3c7d4cdd-af9a-4d40-a0e3-d571d61bc2e1" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/dbd6ec11-4560-4627-8bba-093595d76ce2" />
+
 ## Features
 
 - 25 minute FOCUS and 5 minute BREAK loop
@@ -16,7 +20,7 @@ Minimalist and modern pomodoro timer.
 
 ## Live Demo
 
-_(GitHub Pages Link)_
+[_(GitHub Pages Link)_](https://osti7.github.io/PomoFocus/)
 
 ## Tech Details
 
