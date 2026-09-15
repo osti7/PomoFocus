@@ -12,20 +12,14 @@ let workingMinute = 25;
 let workingTime = workingMinute * 60 - 1;
 let breakMinute = 5;
 let breakTime = breakMinute * 60 - 1;
-let running = false;
 let workingTimer = null;
 let breakingTimer = null;
 
 function startStop(){
     if(SSbutton.innerHTML == "Stop"){
-        running = false;
-
         SSbutton.innerHTML = "Start";
         SSbutton.style.backgroundColor = "#4500ff";
         SSbutton.disabled = false;
-
-        resetButton.style.backgroundColor = "transparent";
-        resetButton.disabled = false;
 
         frame.style.borderColor = "#4500ff";
         frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
@@ -38,14 +32,9 @@ function startStop(){
     }
 
     else{
-        running = true;
-
         SSbutton.innerHTML = "Stop";
         SSbutton.style.backgroundColor = "#000";
         SSbutton.disabled = false;
-
-        resetButton.style.backgroundColor = "#777";
-        resetButton.disabled = true;
         
         frame.style.borderColor = "#777";
         frame.style.boxShadow = "none";
@@ -60,7 +49,9 @@ function startStop(){
 }
 
 function reset(){
-    running = false;
+    clearInterval(workingTimer);
+    clearInterval(breakingTimer);
+
     workingMinute = 25;
     breakMinute = 5;
     workingTime = workingMinute * 60 - 1;
@@ -71,9 +62,6 @@ function reset(){
     SSbutton.style.backgroundColor = "#4500ff";
     SSbutton.style.borderColor = "#4500ff";
     SSbutton.disabled = false;
-
-    resetButton.style.backgroundColor = "transparent";
-    resetButton.disabled = false;
 
     frame.style.borderColor = "#4500ff";
     frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
@@ -87,7 +75,7 @@ function reset(){
 }
 
 function timing(){
-    if(workingTime >= 0 && running == true){
+    if(workingTime >= 0){
         const minute = Math.floor(workingTime / 60);
         let second = workingTime % 60;
     
@@ -131,7 +119,7 @@ function breaking(){
     mode.style.color = "#aaff00"
 
 
-    if(breakTime >= 0 /*&& running == true*/){
+    if(breakTime >= 0){
         const bMinute = Math.floor(breakTime / 60);
         let bSecond = breakTime % 60;
     
