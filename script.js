@@ -3,6 +3,8 @@ const resetButton = document.getElementById("resetButton");
 const frame = document.getElementById("frame");
 const timer = document.getElementById("timer");
 const mode = document.getElementById("mode");
+const themeButton = document.getElementById("themeButton");
+const body = document.getElementById("body");
 const completed = new Audio("completed.mp3");
 const started = new Audio("started.mp3");
 const finished = new Audio("finished.mp3");
@@ -14,9 +16,13 @@ let breakMinute = 5;
 let breakTime = breakMinute * 60 - 1;
 let workingTimer = null;
 let breakingTimer = null;
+let running = false;
+let darkTheme = true;
 
 function startStop(){
     if(SSbutton.innerHTML == "Stop"){
+        running = false;
+
         SSbutton.innerHTML = "Start";
         SSbutton.style.backgroundColor = "#4500ff";
         SSbutton.disabled = false;
@@ -24,7 +30,13 @@ function startStop(){
         frame.style.borderColor = "#4500ff";
         frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
 
-        timer.style.color = "#fff";
+        if(darkTheme == true){
+            timer.style.color = "white";
+        }
+    
+        else{
+            timer.style.color = "black";
+        }
 
         finished.play();
 
@@ -32,6 +44,8 @@ function startStop(){
     }
 
     else{
+        running = true;
+
         SSbutton.innerHTML = "Stop";
         SSbutton.style.backgroundColor = "#000";
         SSbutton.disabled = false;
@@ -56,6 +70,7 @@ function reset(){
     breakMinute = 5;
     workingTime = workingMinute * 60 - 1;
     breakTime = breakMinute * 60 - 1;
+    running = false;
     timer.innerHTML = workingMinute + ".00";
 
     SSbutton.innerHTML = "Start";
@@ -66,7 +81,13 @@ function reset(){
     frame.style.borderColor = "#4500ff";
     frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
 
-    timer.style.color = "#fff";
+    if(darkTheme == true){
+        timer.style.color = "white";
+    }
+
+    else{
+        timer.style.color = "black";
+    }
 
     mode.innerHTML = "FOCUS";
     mode.style.color = "#4500ff"
@@ -113,10 +134,16 @@ function breaking(){
     frame.style.borderColor = "#aaff00";
     frame.style.boxShadow = "0px 0px 25px #aaff00 inset, 0px 0px 50px #aaff00";
 
-    timer.style.color = "#fff";
+    if(darkTheme == true){
+        timer.style.color = "white";
+    }
+
+    else{
+        timer.style.color = "black";
+    }
 
     mode.innerHTML = "BREAK";
-    mode.style.color = "#aaff00"
+    mode.style.color = "#aaff00";
 
 
     if(breakTime >= 0){
@@ -132,5 +159,23 @@ function breaking(){
     if(breakTime == 0){
         clearInterval(breakingTimer);
         reset();
+    }
+}
+
+function changeTheme(){
+    if(running == false && darkTheme == true){
+        darkTheme = false;
+        body.style.backgroundColor = "white";
+        timer.style.color = "black";
+        resetButton.style.color = "black";
+        themeButton.style.borderColor = "black";
+    }
+
+    else if(running == false && darkTheme == false){
+        darkTheme = true;
+        body.style.backgroundColor = "black";
+        timer.style.color = "white";
+        resetButton.style.color = "white";
+        themeButton.style.borderColor = "white";
     }
 }

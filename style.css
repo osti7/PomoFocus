@@ -1,5 +1,5 @@
 *{
-    background-color: black;
+    background-color: transparent;
     color: white;
     font-family: monospace;
     justify-content: center;
@@ -11,6 +11,7 @@
 }
 
 html, body{
+    background-color: black;
     position: static;
     overflow: hidden;
 }
@@ -46,7 +47,7 @@ button:hover{
 
 #buttons{
     display: flex;
-    /*justify-content: space-around;*/
+    justify-content: space-around;
 }
 
 #startButton{
@@ -59,6 +60,17 @@ button:hover{
 
 #resetButton:hover{
     box-shadow: 0px 0px 50px #777;
+}
+
+#themeButton{
+    border-color: white;
+    width: 100px;
+}
+
+#themeButton img{
+    margin: 16px;
+    border-radius: 100px;
+    width: 60px;
 }
 
 #info{
