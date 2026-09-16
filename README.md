@@ -1,4 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f9085ea9-ffdc-4733-8e96-102c2a4e8a1d" /># PomoFocus | Pomodoro Timer
 Minimalist and modern pomodoro timer. 
 
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/57139dae-c1c4-4908-8a85-35a3ee210448" />
