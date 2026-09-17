@@ -3,7 +3,7 @@ Minimalist and modern pomodoro timer.
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/d6700132-1f32-45e1-93af-f988ccaa1759" />
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/4d5f8224-a8ca-4220-b617-40caf00f79d2" />
 <img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/aa11e131-1c15-4b89-b5e0-85070d7c1c34" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eb5c12f2-52d4-45b1-9016-6bd4a2fc3392" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/eb5c12f2-52d4-45b1-9016-6bd4a2fc3392" />
 
 ## Features
 
