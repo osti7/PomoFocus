@@ -1,16 +1,17 @@
 Minimalist and modern pomodoro timer. 
 
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/57139dae-c1c4-4908-8a85-35a3ee210448" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/5b538842-6a94-4901-9668-93ddae879f85" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/5faf9a53-71ce-49e4-8e9f-034ff10f3b84" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/058b180c-b793-4ac7-8c6a-53c884ca480a" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/d6700132-1f32-45e1-93af-f988ccaa1759" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/4d5f8224-a8ca-4220-b617-40caf00f79d2" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/aa11e131-1c15-4b89-b5e0-85070d7c1c34" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eb5c12f2-52d4-45b1-9016-6bd4a2fc3392" />
 
 ## Features
 
 - 25 minute FOCUS and 5 minute BREAK loop
 - Switchable dark/light theme
+- Mute/unmute button
 - Purple neon theme
-- Three buttons for control
+- Four buttons for control
 - Sound feedbacks
 
 ## How It Works
