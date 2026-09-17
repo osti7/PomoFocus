@@ -26,9 +26,17 @@
                 Reset
             </button>
 
-            <button onclick="changeTheme()" id="themeButton">
-                <img src="theme.svg" alt="">
-            </button>
+            <div id="miniButtons">
+                <button onclick="changeTheme()" id="themeButton">
+                    <img src="theme.svg" alt="" id="themeImage">
+                    <p id="themeText">Theme</p>
+                </button>
+    
+                <button onclick="changeSound()" id="muteButton">
+                    <img src="unmute.svg" alt="" id="muteImage">
+                    <p id="muteText">Mute</p>
+                </button>
+            </div>
         </div>
     </div>
 

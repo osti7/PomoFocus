@@ -4,6 +4,11 @@ const frame = document.getElementById("frame");
 const timer = document.getElementById("timer");
 const mode = document.getElementById("mode");
 const themeButton = document.getElementById("themeButton");
+const muteButton = document.getElementById("muteButton");
+const themeText = document.getElementById("themeText");
+const muteText = document.getElementById("muteText");
+const themeImage = document.getElementById("themeImage");
+const muteImage = document.getElementById("muteImage");
 const body = document.getElementById("body");
 const completed = new Audio("completed.mp3");
 const started = new Audio("started.mp3");
@@ -18,6 +23,7 @@ let workingTimer = null;
 let breakingTimer = null;
 let running = false;
 let darkTheme = true;
+let mute = false;
 
 function startStop(){
     if(SSbutton.innerHTML == "Stop"){
@@ -38,7 +44,9 @@ function startStop(){
             timer.style.color = "black";
         }
 
-        finished.play();
+        if(mute == false){
+            finished.play();
+        }
 
         clearInterval(workingTimer);
     }
@@ -55,7 +63,9 @@ function startStop(){
 
         timer.style.color = "#777";
 
-        started.play();
+        if(mute == false){
+            started.play();
+        }
 
         clearInterval(breakingTimer);
         workingTimer = setInterval(timing, 1000);
@@ -92,7 +102,9 @@ function reset(){
     mode.innerHTML = "FOCUS";
     mode.style.color = "#4500ff"
 
-    reseted.play();
+    if(mute == false){
+        reseted.play();
+    }
 }
 
 function timing(){
@@ -117,7 +129,9 @@ function timing(){
 
         timer.style.color = "#fff";
 
-        completed.play();
+        if(mute == false){
+            completed.play();
+        }
 
         clearInterval(workingTimer);
         breakingTimer = setInterval(breaking, 1000);
@@ -126,6 +140,8 @@ function timing(){
 }
 
 function breaking(){
+    running = false;
+    
     SSbutton.innerHTML = "Start";
     SSbutton.style.backgroundColor = "#aaff00";
     SSbutton.style.borderColor = "#aaff00";
@@ -169,6 +185,9 @@ function changeTheme(){
         timer.style.color = "black";
         resetButton.style.color = "black";
         themeButton.style.borderColor = "black";
+        muteButton.style.borderColor = "black";
+        themeText.style.color = "black";
+        muteText.style.color = "black";
     }
 
     else if(running == false && darkTheme == false){
@@ -177,5 +196,21 @@ function changeTheme(){
         timer.style.color = "white";
         resetButton.style.color = "white";
         themeButton.style.borderColor = "white";
+        muteButton.style.borderColor = "white";
+        themeText.style.color = "white";
+        muteText.style.color = "white";
+    }   
+}
+
+function changeSound(){
+    if(mute == false){
+        mute = true;
+        muteText.innerHTML = "Unmute";
+        muteImage.src = "mute.svg";
+    }
+    else{
+        mute = false;
+        muteText.innerHTML = "Mute";
+        muteImage.src = "unmute.svg";
     }
 }

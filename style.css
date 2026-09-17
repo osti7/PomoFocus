@@ -62,15 +62,29 @@ button:hover{
     box-shadow: 0px 0px 50px #777;
 }
 
-#themeButton{
-    border-color: white;
-    width: 100px;
+#miniButtons{
+    display: grid;
+    place-items: center;
+    height: 100px;
 }
 
-#themeButton img{
-    margin: 16px;
+#miniButtons button{
+    border-color: white;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#miniButtons button img{
     border-radius: 100px;
-    width: 60px;
+    width: 24px;
+    display: inline-block;
+}
+
+#miniButtons button p{
+    font-size: 18px;
+    display: inline-block;
 }
 
 #info{
