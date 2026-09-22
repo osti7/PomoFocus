@@ -34,7 +34,7 @@ function startStop(){
         SSbutton.disabled = false;
 
         frame.style.borderColor = "#4500ff";
-        frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
+        frame.style.boxShadow = "0px 0px 50px #4500ff inset, 0px 0px 100px #4500ff";
 
         if(darkTheme == true){
             timer.style.color = "white";
@@ -89,7 +89,7 @@ function reset(){
     SSbutton.disabled = false;
 
     frame.style.borderColor = "#4500ff";
-    frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
+    frame.style.boxShadow = "0px 0px 50px #4500ff inset, 0px 0px 100px #4500ff";
 
     if(darkTheme == true){
         timer.style.color = "white";
@@ -125,7 +125,7 @@ function timing(){
         SSbutton.style.boxShadow = "none";
 
         frame.style.borderColor = "#4500ff";
-        frame.style.boxShadow = "0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff";
+        frame.style.boxShadow = "0px 0px 50px #4500ff inset, 0px 0px 100px #4500ff";
 
         timer.style.color = "#fff";
 
@@ -148,7 +148,7 @@ function breaking(){
     SSbutton.disabled = true;
 
     frame.style.borderColor = "#aaff00";
-    frame.style.boxShadow = "0px 0px 25px #aaff00 inset, 0px 0px 50px #aaff00";
+    frame.style.boxShadow = "0px 0px 50px #aaff00 inset, 0px 0px 100px #aaff00";
 
     if(darkTheme == true){
         timer.style.color = "white";
@@ -214,3 +214,56 @@ function changeSound(){
         muteImage.src = "unmute.svg";
     }
 }
+
+document.addEventListener("keydown", (e) => {
+    if(e.code === "KeyR"){
+        reset();
+    }
+
+    else if(e.code === "Space"){
+        if(running == true){
+            running = false;
+
+            SSbutton.innerHTML = "Start";
+            SSbutton.style.backgroundColor = "#4500ff";
+            SSbutton.disabled = false;
+    
+            frame.style.borderColor = "#4500ff";
+            frame.style.boxShadow = "0px 0px 50px #4500ff inset, 0px 0px 100px #4500ff";
+    
+            if(darkTheme == true){
+                timer.style.color = "white";
+            }
+        
+            else{
+                timer.style.color = "black";
+            }
+    
+            if(mute == false){
+                finished.play();
+            }
+    
+            clearInterval(workingTimer);
+        }
+
+        else{
+            running = true;
+
+            SSbutton.innerHTML = "Stop";
+            SSbutton.style.backgroundColor = "#000";
+            SSbutton.disabled = false;
+            
+            frame.style.borderColor = "#777";
+            frame.style.boxShadow = "none";
+    
+            timer.style.color = "#777";
+    
+            if(mute == false){
+                started.play();
+            }
+    
+            clearInterval(breakingTimer);
+            workingTimer = setInterval(timing, 1000);
+        }
+    }
+})

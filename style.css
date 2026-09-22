@@ -5,6 +5,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor: default;
 
     margin: 0;
     padding: 0;
@@ -16,6 +17,10 @@ html, body{
     overflow: hidden;
 }
 
+::selection{
+    background-color: #3000ee;
+}
+
 button{
     border: 3px solid #4500ff;
     border-radius: 50px;
@@ -24,16 +29,18 @@ button{
     width: 400px;
     font-size: 50px;
     display: inline-block;
+    transition: 0.2s;
 }
 
 button:hover{
     box-shadow: 0px 0px 50px #4500ff;
+    transform: scale(1.1);
 }
 
 #frame{
     border: 2px solid #4500ff;
     border-radius: 80px;
-    box-shadow: 0px 0px 25px #4500ff inset, 0px 0px 50px #4500ff;
+    box-shadow: 0px 0px 50px #4500ff inset, 0px 0px 100px #4500ff;
 
     margin: 100px;
     padding: 100px;
