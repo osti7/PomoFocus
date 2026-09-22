@@ -1,9 +1,9 @@
 Minimalist and modern pomodoro timer. 
 
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/d6700132-1f32-45e1-93af-f988ccaa1759" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/4d5f8224-a8ca-4220-b617-40caf00f79d2" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/aa11e131-1c15-4b89-b5e0-85070d7c1c34" />
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/eb5c12f2-52d4-45b1-9016-6bd4a2fc3392" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/b603be5b-87b3-4f0c-bdce-6aa746c71968" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/7a585720-4247-45d7-a213-bdce555884d0" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/4b8540cf-d65c-4836-93ef-787aef4b0815" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/d0747153-1fc6-4892-9f56-3260f7ac714c" />
 
 ## Features
 
@@ -12,6 +12,7 @@ Minimalist and modern pomodoro timer.
 - Mute/unmute button
 - Purple neon theme
 - Four buttons for control
+- Shortcut controls
 - Sound feedbacks
 
 ## How It Works
